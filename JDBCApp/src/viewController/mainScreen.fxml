@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.MainScreenController">
+  <children>
+    <VBox prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #dedede;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label contentDisplay="LEFT" disable="false" minHeight="-Infinity" minWidth="-Infinity" opacity="1.0" prefHeight="80.0" prefWidth="464.0" text="Scheduling App" textAlignment="LEFT" visible="true" wrapText="false">
+          <font>
+            <Font name="Microsoft YaHei UI" size="60.0" />
+          </font>
+          <textFill>
+            <Color blue="1.000" green="0.639" red="0.000" fx:id="x1" />
+          </textFill>
+          <VBox.margin>
+            <Insets left="45.0" top="20.0" />
+          </VBox.margin>
+        </Label>
+        <HBox prefHeight="26.0" prefWidth="1200.0">
+          <children>
+            <Label fx:id="loggedInUserLabel" text="Welcome User test" textFill="$x1">
+              <font>
+                <Font name="Microsoft JhengHei UI" size="20.0" />
+              </font>
+              <HBox.margin>
+                <Insets left="70.0" fx:id="x3" />
+              </HBox.margin>
+            </Label>
+          </children>
+          <VBox.margin>
+            <Insets top="10.0" />
+          </VBox.margin>
+        </HBox>
+        <HBox fillHeight="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="800.0" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" VBox.vgrow="ALWAYS">
+          <children>
+            <TabPane maxHeight="-1.0" maxWidth="-1.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" style="-fx-border-color: #c9c9c9;" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="1.7976931348623157E308" tabMinHeight="40.0" tabMinWidth="324.0">
+              <tabs>
+                <Tab closable="false" style="-fx-background-radius: 0;&#10;-fx-font-size: 20;&#10;" text="Customers">
+                  <content>
+                    <AnchorPane id="Content" maxHeight="-1.0" maxWidth="-1.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c9c9c9;">
+                      <children>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="749.0" prefWidth="1398.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <children>
+                            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="1386.0">
+                              <children>
+                                <TableView id="customerTableView" fx:id="customersTableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="1371.0">
+                                  <columns>
+                                    <TableColumn fx:id="customersCustomerIDColumn" prefWidth="100.0" text="Customer ID" />
+                                    <TableColumn fx:id="customersNameColumn" prefWidth="200.0" text="Name" />
+                                    <TableColumn fx:id="customersAddressColumn" prefWidth="300.0" text="Address" />
+                                    <TableColumn fx:id="customersContactColumn" prefWidth="200.0" text="Phone Number" />
+                                  </columns>
+                                </TableView>
+                              </children>
+                              <VBox.margin>
+                                <Insets left="13.0" top="30.0" />
+                              </VBox.margin>
+                            </HBox>
+                            <HBox prefHeight="40.0" prefWidth="200.0">
+                              <children>
+                                <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createCustomerButtonHandler" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color:  #00a3ff;&#10;-fx-font-weight: bold;&#10;-fx-background-radius: 0;" text="Create" textFill="WHITE">
+                                  <font>
+                                    <Font name="Microsoft JhengHei UI Bold" size="18.0" fx:id="x2" />
+                                  </font>
+                                  <HBox.margin>
+                                    <Insets left="800.0" />
+                                  </HBox.margin>
+                                </Button>
+                                <Button font="$x2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateCustomerButtonHandler" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color:  #00a3ff;&#10;-fx-font-weight: bold;&#10;-fx-background-radius: 0;" text="Update" textFill="WHITE">
+                                  <HBox.margin>
+                                    <Insets left="70.0" fx:id="x3" />
+                                  </HBox.margin>
+                                </Button>
+                                <Button font="$x2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteCustomerButtonHandler" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color:  #00a3ff;&#10;-fx-font-weight: bold;&#10;-fx-background-radius: 0;" text="Delete" textFill="WHITE" HBox.margin="$x3" />
+                              </children>
+                              <VBox.margin>
+                                <Insets top="20.0" />
+                              </VBox.margin>
+                            </HBox>
+                          </children>
+                        </VBox>
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab closable="false" style="-fx-background-radius: 0;&#10;-fx-font-size: 20;" text="Appointments">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c9c9c9;">
+                      <children>
+                        <VBox layoutX="0.0" layoutY="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="749.0" prefWidth="1398.0">
+                          <children>
+                            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="1386.0">
+                              <children>
+                                <TableView fx:id="appointmentsTableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="1371.0">
+                                  <columns>
+                                    <TableColumn fx:id="appointmentsCustomerIDColumn" prefWidth="100.0" text="Customer ID" />
+                                    <TableColumn fx:id="appointmentsNameColumn" prefWidth="200.0" text="Name" />
+                                    <TableColumn fx:id="appointmentsUserIDColumn" prefWidth="100.0" text="User ID" />
+                                    <TableColumn fx:id="appointmentsTypeColumn" prefWidth="150.0" text="Appointment Type" />
+                                    <TableColumn fx:id="appointmentsStartTimeColumn" minWidth="170.0" prefWidth="170.0" text="Start Time" />
+                                    <TableColumn fx:id="appointmentsEndTimeColumn" minWidth="170.0" prefWidth="170.0" text="End Time" />
+                                  </columns>
+                                </TableView>
+                              </children>
+                              <VBox.margin>
+                                <Insets left="13.0" top="30.0" />
+                              </VBox.margin>
+                            </HBox>
+                            <HBox prefHeight="40.0" prefWidth="200.0">
+                              <children>
+                                <Button font="$x2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAppointmentButtonHandler" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color:  #00a3ff;&#10;-fx-font-weight: bold;&#10;-fx-background-radius: 0;" text="Create" textFill="WHITE">
+                                  <HBox.margin>
+                                    <Insets left="800.0" />
+                                  </HBox.margin>
+                                </Button>
+                                <Button font="$x2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateAppointmentButtonHandler" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color:  #00a3ff;&#10;-fx-font-weight: bold;&#10;-fx-background-radius: 0;" text="Update" textFill="WHITE">
+                                  <HBox.margin>
+                                    <Insets left="70.0" fx:id="x3" />
+                                  </HBox.margin>
+                                </Button>
+                                <Button font="$x2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteAppointmentButtonHandler" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color:  #00a3ff;&#10;-fx-font-weight: bold;&#10;-fx-background-radius: 0;" text="Delete" textFill="WHITE">
+                                  <HBox.margin>
+                                    <Insets left="70.0" fx:id="x3" />
+                                  </HBox.margin>
+                                </Button>
+                              </children>
+                              <VBox.margin>
+                                <Insets top="20.0" />
+                              </VBox.margin>
+                            </HBox>
+                          </children>
+                        </VBox>
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab closable="false" style="-fx-background-radius: 0;&#10;-fx-font-size: 20;" text="Calendar">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c9c9c9;">
+                      <children>
+                        <VBox layoutX="0.0" layoutY="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="749.0" prefWidth="1398.0">
+                          <children>
+                            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="1386.0">
+                              <children>
+                                <TabPane prefHeight="615.0" prefWidth="1371.0" style="-fx-border-color: #c9c9c9;&#10;" tabClosingPolicy="UNAVAILABLE">
+                                  <tabs>
+                                    <Tab style="-fx-border-color: #c9c9c9;&#10;" text="Weekly Appointments">
+                                      <content>
+                                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                          <children>
+                                            <TableView fx:id="weeklyTableView" layoutX="0.0" layoutY="3.0" prefHeight="589.0" prefWidth="1370.0">
+                                              <columns>
+                                                <TableColumn fx:id="weeklyAppointmentIDColumn" maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Appointment ID" />
+                                                <TableColumn fx:id="weeklyCustomerIDColumn" prefWidth="81.0" text="Customer ID" />
+                                                <TableColumn fx:id="weeklyNameColumn" minWidth="100.0" prefWidth="119.0" text="Name" />
+                                                <TableColumn fx:id="weeklyUserIDColumn" prefWidth="50.0" text="User ID" />
+                                                <TableColumn fx:id="weeklyTitleColumn" prefWidth="86.0" text="Title" />
+                                                <TableColumn fx:id="weeklyDescriptionColumn" prefWidth="154.0" text="Description" />
+                                                <TableColumn fx:id="weeklyLocationColumn" prefWidth="93.0" text="Location" />
+                                                <TableColumn fx:id="weeklyContactCoulmn" prefWidth="114.0" text="Contact" />
+                                                <TableColumn fx:id="weeklyTypeColumn" prefWidth="95.0" text="Type" />
+                                                <TableColumn fx:id="weeklyStartTimeColumn" maxWidth="5000.0" minWidth="170.0" prefWidth="170.0" text="Start Time" />
+                                                <TableColumn fx:id="weeklyEndTimeColumn" minWidth="170.0" prefWidth="170.0" text="End Time" />
+                                              </columns>
+                                            </TableView>
+                                          </children>
+                                        </AnchorPane>
+                                      </content>
+                                    </Tab>
+                                    <Tab style="-fx-border-color: #c9c9c9;&#10;" text="Monthly Appointments">
+                                      <content>
+                                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                          <children>
+                                            <TableView fx:id="monthlyTableView" layoutX="0.0" layoutY="3.0" prefHeight="589.0" prefWidth="1370.0">
+                                              <columns>
+                                                <TableColumn fx:id="monthlyAppointmentIDColumn" maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Appointment ID" />
+                                                <TableColumn fx:id="monthlyCustomerIDColumn" prefWidth="81.0" text="Customer ID" />
+                                                <TableColumn fx:id="monthlyNameColumn" prefWidth="119.0" text="Name" />
+                                                <TableColumn fx:id="monthlyUserIDColumn" prefWidth="50.0" text="User ID" />
+                                                <TableColumn fx:id="monthlyTitleColumn" prefWidth="86.0" text="Title" />
+                                                <TableColumn fx:id="monthlyDescriptionColumn" prefWidth="154.0" text="Description" />
+                                                <TableColumn fx:id="monthlyLocationColumn" prefWidth="93.0" text="Location" />
+                                                <TableColumn fx:id="monthlyContactColumn" prefWidth="114.0" text="Contact" />
+                                                <TableColumn fx:id="monthlyTypeColumn" prefWidth="95.0" text="Type" />
+                                                <TableColumn fx:id="monthlyStartTimeColumn" maxWidth="5000.0" minWidth="10.0" prefWidth="170.0" text="Start Time" />
+                                                <TableColumn fx:id="monthlyEndTimeColumn" prefWidth="170.0" text="End Time" />
+                                              </columns>
+                                            </TableView>
+                                          </children>
+                                        </AnchorPane>
+                                      </content>
+                                    </Tab>
+                                    <Tab style="-fx-border-color: #c9c9c9;&#10;" text="All Appointments">
+                                      <content>
+                                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                          <children>
+                                            <TableView fx:id="allTableView" layoutX="0.0" layoutY="3.0" prefHeight="589.0" prefWidth="1370.0">
+                                              <columns>
+                                                <TableColumn fx:id="allAppointmentIDColumn" maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Appointment ID" />
+                                                <TableColumn fx:id="allCustomerIDColumn" prefWidth="81.0" text="Customer ID" />
+                                                <TableColumn fx:id="allNameColumn" prefWidth="119.0" text="Name" />
+                                                <TableColumn fx:id="allUserIDColumn" prefWidth="50.0" text="User ID" />
+                                                <TableColumn fx:id="allTitleColumn" maxWidth="5000.0" minWidth="10.0" prefWidth="86.0" text="Title" />
+                                                <TableColumn fx:id="allDecscriptionColumn" maxWidth="5000.0" minWidth="10.0" prefWidth="154.0" text="Description" />
+                                                <TableColumn fx:id="allLocationColumn" prefWidth="93.0" text="Location" />
+                                                <TableColumn fx:id="allContactColumn" prefWidth="114.0" text="Contact" />
+                                                <TableColumn fx:id="allTypeCoulumn" prefWidth="95.0" text="Type" />
+                                                <TableColumn fx:id="allStartTimeColumn" maxWidth="5000.0" minWidth="10.0" prefWidth="170.0" text="Start Time" />
+                                                <TableColumn fx:id="allEndTimeColumn" prefWidth="170.0" text="End Time" />
+                                              </columns>
+                                            </TableView>
+                                          </children>
+                                        </AnchorPane>
+                                      </content>
+                                    </Tab>
+                                  </tabs>
+                                </TabPane>
+                              </children>
+                              <VBox.margin>
+                                <Insets left="13.0" top="30.0" />
+                              </VBox.margin>
+                            </HBox>
+                          </children>
+                        </VBox>
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab closable="false" style="-fx-background-radius: 0;&#10;-fx-font-size: 20;" text="Reports">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c9c9c9;">
+                                 <children>
+                                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c9c9c9;">
+                                       <children>
+                                          <VBox layoutX="0.0" layoutY="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="749.0" prefWidth="1398.0">
+                                             <children>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="1386.0">
+                                                   <children>
+                                                      <TabPane prefHeight="615.0" prefWidth="1371.0" style="-fx-border-color: #c9c9c9;&#10;" tabClosingPolicy="UNAVAILABLE">
+                                                         <tabs>
+                                                            <Tab style="-fx-border-color: #c9c9c9;&#10;" text="Types This Month Report">
+                                                               <content>
+                                                                  <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <TableView fx:id="typeReportTableView" layoutX="0.0" layoutY="3.0" prefHeight="589.0" prefWidth="1370.0">
+                                                                           <columns>
+                                                                              <TableColumn fx:id="typeReportTypeColum" maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Type" />
+                                                                              <TableColumn fx:id="typeReportCountColumn" prefWidth="100.0" text="Count" />
+                                                                           </columns>
+                                                                        </TableView>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </Tab>
+                                                            <Tab style="-fx-border-color: #c9c9c9;&#10;" text="User Schedule Report">
+                                                               <content>
+                                                                  <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label layoutX="16.0" layoutY="14.0" text="Select User:">
+                                                                           <font>
+                                                                              <Font name="Microsoft JhengHei UI" size="20.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <ComboBox fx:id="userReportComboBox" layoutX="135.0" layoutY="12.0" onAction="#userReportComboHandler" prefWidth="150.0" style="-fx-border-color: c9c9c9; -fx-background-radius: 0;" AnchorPane.topAnchor="12.0" />
+                                                                        <TableView fx:id="userReportTableView" layoutX="0.0" layoutY="53.0" prefHeight="539.0" prefWidth="1370.0">
+                                                                           <columns>
+                                                                              <TableColumn fx:id="userReportAppointmentIDColumn" maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Appointment ID" />
+                                                                              <TableColumn fx:id="userReportCustomerIDColumn" prefWidth="100.0" text="Customer ID" />
+                                                                              <TableColumn fx:id="userReportNameColumn" prefWidth="200.0" text="Name" />
+                                                                              <TableColumn fx:id="userReportTitleColumn" prefWidth="100.0" text="Title" />
+                                                                              <TableColumn fx:id="userReportDescriptionColumn" prefWidth="196.0" text="Description" />
+                                                                              <TableColumn fx:id="userReportLocationColumn" prefWidth="105.0" text="Location" />
+                                                                              <TableColumn fx:id="userReportContactColumn" prefWidth="90.0" text="Contact" />
+                                                                              <TableColumn fx:id="userReportTypeColumn" prefWidth="76.0" text="Type" />
+                                                                              <TableColumn fx:id="userReportStartTimeColumn" maxWidth="5000.0" minWidth="170.0" prefWidth="170.0" text="Start Time" />
+                                                                              <TableColumn fx:id="userReportEndTimeColumn" minWidth="170.0" prefWidth="170.0" text="End Time" />
+                                                                           </columns>
+                                                                        </TableView>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </Tab>
+                                                            <Tab style="-fx-border-color: #c9c9c9;&#10;" text="Custom Report">
+                                                               <content>
+                                                                  <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label layoutX="16.0" layoutY="14.0" text="Select Customer:">
+                                                                           <font>
+                                                                              <Font name="Microsoft JhengHei UI" size="20.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <ComboBox fx:id="customReportComboBox" layoutX="187.0" layoutY="12.0" onAction="#customReportComboHandler" prefWidth="150.0" style="-fx-border-color: c9c9c9; -fx-background-radius: 0;" AnchorPane.topAnchor="12.0" />
+                                                                        <TableView fx:id="customReportTableView" layoutY="53.0" prefHeight="539.0" prefWidth="1370.0">
+                                                                           <columns>
+                                                                              <TableColumn fx:id="customReportAppointmentIDColumn" maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Appointment ID" />
+                                                                              <TableColumn fx:id="customReportCustomerIDColumn" prefWidth="100.0" text="Customer ID" />
+                                                                              <TableColumn fx:id="customReportTitleColumn" prefWidth="100.0" text="Title" />
+                                                                              <TableColumn fx:id="customReportDescriptionColumn" prefWidth="196.0" text="Description" />
+                                                                              <TableColumn fx:id="customReportLocationColumn" prefWidth="105.0" text="Location" />
+                                                                              <TableColumn fx:id="customReportContactColumn" prefWidth="90.0" text="Contact" />
+                                                                              <TableColumn fx:id="customReportTypeColumn" prefWidth="76.0" text="Type" />
+                                                                              <TableColumn fx:id="customReportStartTimeColumn" maxWidth="5000.0" minWidth="170.0" prefWidth="170.0" text="Start Time" />
+                                                                              <TableColumn fx:id="customReportEndTimeColumn" minWidth="170.0" prefWidth="170.0" text="End Time" />
+                                                                           </columns>
+                                                                        </TableView>
+                                                                     </children></AnchorPane>
+                                                               </content>
+                                                            </Tab>
+                                                         </tabs>
+                                                      </TabPane>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets left="13.0" top="30.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+              <HBox.margin>
+                <Insets />
+              </HBox.margin>
+            </TabPane>
+          </children>
+          <VBox.margin>
+            <Insets left="50.0" top="30.0" />
+          </VBox.margin>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>

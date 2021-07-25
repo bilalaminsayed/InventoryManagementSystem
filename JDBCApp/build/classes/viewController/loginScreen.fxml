@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-classpath-element ../../img?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="400.0" snapToPixel="true" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.LoginScreenController">
+  <children>
+    <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #dedede" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label fx:id="loginMainLabel" alignment="TOP_LEFT" contentDisplay="LEFT" disable="false" opacity="1.0" prefHeight="157.0" prefWidth="297.0" text="Login " textAlignment="LEFT" textFill="#00a3ff" visible="true" wrapText="true" VBox.vgrow="NEVER">
+          <font>
+            <Font name="Microsoft YaHei UI" size="60.0" />
+          </font>
+          <VBox.margin>
+            <Insets left="45.0" top="60.0" />
+          </VBox.margin>
+        </Label>
+        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="400.0">
+          <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="/img/user.png" />
+              </image>
+              <HBox.margin>
+                <Insets left="50.0" fx:id="x1" />
+              </HBox.margin>
+            </ImageView>
+            <TextField fx:id="usernameTextField" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="270.0" promptText="Username" style="-fx-background-color: #c9c9c9;&#10;-fx-prompt-text-fill: #00a3ff;&#10;-fx-background-radius: 0;">
+              <HBox.margin>
+                <Insets />
+              </HBox.margin>
+            </TextField>
+          </children>
+          <VBox.margin>
+            <Insets top="40.0" />
+          </VBox.margin>
+        </HBox>
+        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0">
+          <children>
+            <ImageView fitHeight="34.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.margin="$x1">
+              <image>
+                <Image url="/img/password.png" />
+              </image>
+            </ImageView>
+            <PasswordField fx:id="passwordTextField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="270.0" promptText="Password" style="-fx-background-color: #c9c9c9;&#10;-fx-prompt-text-fill: #00a3ff;&#10;-fx-background-radius: 0;">
+              <HBox.margin>
+                <Insets />
+              </HBox.margin>
+            </PasswordField>
+          </children>
+          <VBox.margin>
+            <Insets top="20.0" />
+          </VBox.margin>
+        </HBox>
+        <HBox prefHeight="30.0" prefWidth="200.0">
+          <children>
+            <Button fx:id="loginButton" contentDisplay="CENTER" defaultButton="true" graphicTextGap="5.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loginButtonHandler" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color:  #00a3ff;&#10;-fx-font-weight: bold;&#10;-fx-background-radius: 0;" text="LOGIN" textFill="WHITE">
+              <font>
+                <Font name="Microsoft JhengHei UI" size="15.0" />
+              </font>
+              <HBox.margin>
+                <Insets left="50.0" fx:id="x1" />
+              </HBox.margin>
+            </Button>
+          </children>
+          <VBox.margin>
+            <Insets top="40.0" />
+          </VBox.margin>
+        </HBox>
+        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="400.0">
+          <children>
+            <Label fx:id="errorLabel" alignment="TOP_CENTER" ellipsisString="..." maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="300.0" text="" textFill="RED" textOverrun="ELLIPSIS" wrapText="true">
+              <HBox.margin>
+                <Insets left="50.0" right="50.0" />
+              </HBox.margin>
+            </Label>
+          </children>
+          <VBox.margin>
+            <Insets top="30.0" />
+          </VBox.margin>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>
