@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="804.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.AddAppointmentScreenController">
+  <children>
+    <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label contentDisplay="LEFT" disable="false" minHeight="-Infinity" minWidth="-Infinity" opacity="1.0" prefHeight="80.0" prefWidth="626.0" text="Add Appointment" textAlignment="LEFT" textFill="#00a3ff" visible="true" wrapText="false">
+          <font>
+            <Font name="Microsoft YaHei UI" size="60.0" />
+          </font>
+          <VBox.margin>
+            <Insets left="45.0" top="20.0" />
+          </VBox.margin>
+        </Label>
+        <HBox prefHeight="30.0" prefWidth="200.0">
+          <children>
+            <Label style="-fx-font-color: #c9c9c9;" text="Select Customer" textFill="BLACK">
+              <font>
+                <Font name="Microsoft JhengHei UI" size="20.0" fx:id="x1" />
+              </font>
+              <HBox.margin>
+                <Insets left="70.0" top="2.0" />
+              </HBox.margin>
+            </Label>
+            <ComboBox fx:id="appointmentCustomerComboBox" onAction="#customerComboHandler" prefHeight="30.0" prefWidth="321.0" style="-fx-border-color: #c9c9c9;&#10;-fx-background-radius: 0;">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+              <HBox.margin>
+                <Insets left="34.0" />
+              </HBox.margin>
+            </ComboBox>
+          </children>
+          <VBox.margin>
+            <Insets top="70.0" />
+          </VBox.margin>
+        </HBox>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="650.0">
+          <children>
+            <Label font="$x1" style="-fx-font-color: #c9c9c9;" text="User ID" textFill="BLACK">
+              <HBox.margin>
+                <Insets left="70.0" top="2.0" />
+              </HBox.margin>
+            </Label>
+            <TextField id="customerIDField" fx:id="appointmentUserIDField" editable="false" prefHeight="30.0" prefWidth="321.0" style="-fx-border-color: #c9c9c9;&#10;-fx-background-radius: 0;">
+              <HBox.margin>
+                <Insets left="119.0" />
+              </HBox.margin>
+            </TextField>
+          </children>
+          <VBox.margin>
+            <Insets top="20.0" fx:id="x2" />
+          </VBox.margin>
+        </HBox>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="650.0" VBox.margin="$x2">
+          <children>
+            <Label font="$x1" style="-fx-font-color: #c9c9c9;" text="Title" textFill="BLACK">
+              <HBox.margin>
+                <Insets left="70.0" top="2.0" />
+              </HBox.margin>
+            </Label>
+            <TextField id="customerIDField" fx:id="appointmentTitleField" editable="true" prefHeight="30.0" prefWidth="321.0" style="-fx-border-color: #c9c9c9;&#10;-fx-background-radius: 0;">
+              <HBox.margin>
+                <Insets left="147.0" />
+              </HBox.margin>
+            </TextField>
+          </children>
+        </HBox>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="650.0" VBox.margin="$x2">
+          <children>
+            <Label font="$x1" style="-fx-font-color: #c9c9c9;" text="Description" textFill="BLACK">
+              <HBox.margin>
+                <Insets left="70.0" top="2.0" />
+              </HBox.margin>
+            </Label>
+            <TextArea fx:id="appointmentDescriptionField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="321.0" style="-fx-border-color: #c9c9c9;&#10;-fx-background-radius: 0;" wrapText="true">
+              <HBox.margin>
+                <Insets left="80.0" />
+              </HBox.margin>
+            </TextArea>
+          </children>
+        </HBox>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="650.0" VBox.margin="$x2">
+          <children>
+            <Label font="$x1" style="-fx-font-color: #c9c9c9;" text="Location" textFill="BLACK">
+              <HBox.margin>
+                <Insets left="70.0" top="2.0" />
+              </HBox.margin>
+            </Label>
+            <TextField id="customerIDField" fx:id="appointmentLocationField" editable="false" prefHeight="30.0" prefWidth="321.0" style="-fx-border-color: #c9c9c9;&#10;-fx-background-radius: 0;">
+              <HBox.margin>
+                <Insets left="107.0" />
+              </HBox.margin>
+            </TextField>
+          </children>
+        </HBox>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="650.0" VBox.margin="$x2">
+          <children>
+            <Label font="$x1" style="-fx-font-color: #c9c9c9;" text="Contact" textFill="BLACK">
+              <HBox.margin>
+                <Insets left="70.0" top="2.0" />
+              </HBox.margin>
+            </Label>
+            <TextField id="customerIDField" fx:id="appointmentContactField" editable="true" prefHeight="30.0" prefWidth="321.0" style="-fx-border-color: #c9c9c9;&#10;-fx-background-radius: 0;">
+              <HBox.margin>
+                <Insets left="114.0" />
+              </HBox.margin>
+            </TextField>
+          </children>
+        </HBox>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="650.0" VBox.margin="$x2">
+          <children>
+            <Label font="$x1" style="-fx-font-color: #c9c9c9;" text="Type" textFill="BLACK">
+              <HBox.margin>
+                <Insets left="70.0" top="2.0" />
+              </HBox.margin>
+            </Label>
+            <TextField id="customerIDField" fx:id="appointmentTypeField" editable="true" prefHeight="30.0" prefWidth="321.0" style="-fx-border-color: #c9c9c9;&#10;-fx-background-radius: 0;">
+              <HBox.margin>
+                <Insets left="142.0" />
+              </HBox.margin>
+            </TextField>
+          </children>
+        </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="650.0">
+               <children>
+                  <Label font="$x1" style="-fx-font-color: #c9c9c9;" text="Date" textFill="BLACK">
+                     <HBox.margin>
+                        <Insets left="70.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="appointmentDatePicker" prefHeight="30.0" prefWidth="321.0" style="-fx-border-color: #c9c9c9; -fx-background-radius: 0;">
+                     <HBox.margin>
+                        <Insets left="143.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="650.0">
+          <children>
+            <Label font="$x1" style="-fx-font-color: #c9c9c9;" text="Start Time" textFill="BLACK">
+              <HBox.margin>
+                <Insets left="70.0" top="2.0" />
+              </HBox.margin>
+            </Label>
+            <ComboBox fx:id="appointmentStartTimeComboBox" prefHeight="30.0" prefWidth="85.0" style="-fx-border-color: #c9c9c9; -fx-background-radius: 0;">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+              <HBox.margin>
+                <Insets left="92.0" fx:id="x3" />
+              </HBox.margin>
+            </ComboBox>
+            <Label font="$x1" style="-fx-font-color: #c9c9c9;" text="Length" textFill="BLACK">
+              <HBox.margin>
+                <Insets left="30.0" fx:id="x3" />
+              </HBox.margin>
+            </Label>
+            <ComboBox id="appointmentStartTimeComboBox" fx:id="appointmentLengthComboBox" prefHeight="30.0" prefWidth="110.0" style="-fx-border-color: #c9c9c9; -fx-background-radius: 0;" HBox.margin="$x3">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+          </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+        </HBox>
+        <HBox prefHeight="40.0" prefWidth="646.0">
+          <children>
+            <Button id="saveButtonHandler" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#saveButtonHandler" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color:  #00a3ff;&#10;-fx-font-weight: bold;&#10;-fx-background-radius: 0;" text="Save" textFill="WHITE">
+              <font>
+                <Font name="Microsoft JhengHei UI Bold" size="18.0" fx:id="x4" />
+              </font>
+              <HBox.margin>
+                <Insets left="249.0" />
+              </HBox.margin>
+            </Button>
+            <Button font="$x4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cancelButtonHandler" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color:  #00a3ff;&#10;-fx-font-weight: bold;&#10;-fx-background-radius: 0;" text="Cancel" textFill="WHITE">
+              <HBox.margin>
+                <Insets left="70.0" />
+              </HBox.margin>
+            </Button>
+          </children>
+          <VBox.margin>
+            <Insets top="80.0" />
+          </VBox.margin>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>
